@@ -9,7 +9,7 @@ function formatBytes(bytes) {
 }
 
 // 1 am PST (I think?)
-const startDate = new Date(Date.UTC(2019, 3, 1, 8, 0, 0));
+const startDate = new Date(Date.UTC(2019, 5, 1, 8, 0, 0));
 let allDates = [];
 
 
