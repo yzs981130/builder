@@ -59,6 +59,11 @@ export const allJobNames = [
     'linux_conda_3.6_cpu',
     'linux_conda_3.7_cpu',
 
+    'linux_conda_2.7_cu101',
+    'linux_conda_3.5_cu101',
+    'linux_conda_3.6_cu101',
+    'linux_conda_3.7_cu101',
+
     'linux_conda_2.7_cu100',
     'linux_conda_3.5_cu100',
     'linux_conda_3.6_cu100',
@@ -80,6 +85,12 @@ export const allJobNames = [
     'linux_manywheel_3.6m_cpu',
     'linux_manywheel_3.7m_cpu',
 
+    'linux_manywheel_2.7m_cu101',
+    'linux_manywheel_2.7mu_cu101',
+    'linux_manywheel_3.5m_cu101',
+    'linux_manywheel_3.6m_cu101',
+    'linux_manywheel_3.7m_cu101',
+
     'linux_manywheel_2.7m_cu100',
     'linux_manywheel_2.7mu_cu100',
     'linux_manywheel_3.5m_cu100',
@@ -98,6 +109,7 @@ export const allJobNames = [
     'macos_wheel_3.7_cpu',
 
     'linux_libtorch_2.7m_cpu',
+    'linux_libtorch_2.7m_cu101',
     'linux_libtorch_2.7m_cu100',
     'linux_libtorch_2.7m_cu92',
     'macos_libtorch_2.7m_cpu',
