@@ -1,0 +1,20 @@
+dist: xenial
+language: python
+python:
+  - "3.7"
+
+services:
+  - docker
+  
+before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+jobs:
+  include:
+    - stage: build
+      name: "conda cuda image"
+      script:
+        - docker build -t yzs981130/conda-cuda -f conda/Dockerfile .
+        - docker push yzs981130/conda-cuda
+    - script: docker run --env PYTORCH_FINAL_PACKAGE_DIR="/remote" --env TORCH_CONDA_BUILD_FOLDER=pytorch-1.4.0 --env PYTORCH_REPO=pytorch --env PYTORCH_BRANCH=v1.4.0 -it --ipc=host --rm -v $(pwd):/remote pytorch/conda-cuda bash -c "cd remote/conda && ./build_pytorch.sh 102 1.4.0 1"
+      name: "pytorch image"
